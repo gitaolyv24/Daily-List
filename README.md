@@ -9,75 +9,67 @@ Daily List Kebutuhan Sehari-hari App adalah aplikasi web untuk mencatat, mengelo
 
 ---
 
-## ✨ Fitur Utama
-- Autentikasi pengguna (Login & Register)
-- Role pengguna (Admin & User)
-- Admin dapat membuat daftar kebutuhan
-- User dapat bergabung (join) ke daftar
-- CRUD daftar & item kebutuhan
-- Item dengan tipe:
-  - Teks
-  - Link
-  - Checklist
-- Prioritas item
-- Sequential unlock (item terbuka berurutan)
-- Tandai item selesai
-- Statistik real-time (total, selesai, progres)
-- UI modern & responsive menggunakan Bootstrap
+## 🚀 Fitur Lengkap
+✅ User Management
+Login & Register
+Role: Admin & User
+Session management
+
+✅ List Management
+Admin dapat membuat daftar (Harian/Mingguan/Lainnya)
+User dapat join/leave daftar
+Tampilan progress per daftar
+
+✅ Item Management
+3 Tipe Item: Teks, Link, Checklist
+Prioritas item
+Sequential unlock (item berikutnya terbuka jika sebelumnya selesai)
+Mark complete/incomplete
+CRUD penuh untuk admin
+
+✅ Dashboard & Statistics
+Total kebutuhan
+Item selesai/belum selesai
+Persentase penyelesaian
+Filter & search daftar
 
 ---
 
-## 🛠️ Teknologi yang Digunakan
-- **Backend**: PHP (Native)
-- **Database**: MySQL
-- **Frontend**: HTML, CSS, Bootstrap
-- **AJAX**: JavaScript
-- **Server Lokal**: XAMPP
-- **Icons**: Font Awesome
+## 🎨 Teknologi
+
+Backend: PHP 7.4+
+Database: MySQL 5.7+
+Frontend: Bootstrap 5.3, Font Awesome 6
+Design: Gradient modern, responsive
 
 ---
 
 ## 📂 Struktur File
 needs_management/
-├── needs_management.sql
-
 ├── config.php
-
 ├── login.php
-
 ├── index.php
-
 ├── view_list.php
-
 ├── browse_lists.php
-
 ├── create_list.php
-
 ├── api.php
-
 ├── logout.php
-
-└── README.md
+└── needs_management.sql
 
 ---
 
 ## 🚀 Cara Instalasi & Menjalankan Aplikasi
 
-### 1️⃣ Persiapan
-- Install **XAMPP**
-- Jalankan **Apache** dan **MySQL**
+###  Setup Database
 
-### 2️⃣ Setup Project
-1. Copy seluruh file project ke:
-C:\xampp\htdocs\needs_management\
+Buka XAMPP Control Panel
+Start Apache dan MySQL
+Buka browser, akses: http://localhost/phpmyadmin
+Klik tab "SQL"
+Copy-paste isi file needs_management.sql
+Klik "Go" untuk eksekusi
 
-2. Buka **phpMyAdmin**
-3. Buat database atau langsung import:
-- Pilih menu **SQL**
-- Paste isi file `needs_management.sql`
-- Klik **Go**
-
-### 3️⃣ Akses Aplikasi
+###  Akses Aplikasi
 Buka browser dan akses:
 http://localhost/needs_management/login.php
 
