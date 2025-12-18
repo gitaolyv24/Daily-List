@@ -40,14 +40,23 @@ Daily List Kebutuhan Sehari-hari App adalah aplikasi web untuk mencatat, mengelo
 ## 📂 Struktur File
 needs_management/
 ├── needs_management.sql
+
 ├── config.php
+
 ├── login.php
+
 ├── index.php
+
 ├── view_list.php
+
 ├── browse_lists.php
+
 ├── create_list.php
+
 ├── api.php
+
 ├── logout.php
+
 └── README.md
 
 ---
