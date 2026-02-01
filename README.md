@@ -61,50 +61,18 @@ Design: Gradient Modern & Responsive Layout.
 
 ---
 
-## my-needs-app/
-├── app/
+## 📂 Struktur Proyek
+Aplikasi ini mengikuti pola arsitektur **MVC (Model-View-Controller)**:
 
-│   ├── Http/
-
-│   │   └── Controllers/
-
-│   │       └── NeedController.php      <-- Otak aplikasi (Logika CRUD)
-
-│   └── Models/
-
-│       └── Need.php                    <-- Representasi tabel database
-
-├── database/
-
-│   └── migrations/
-
-│       └── 2024_xx_xx_create_needs_table.php  <-- Blueprint tabel MySQL
-
-├── resources/
-
-│   └── views/
-
-│       ├── layouts/
-
-│       │   └── app.blade.php           <-- Template utama (Header/Footer)
-
-│       ├── needs/
-
-│       │   └── index.blade.php         <-- Halaman Dashboard (Daftar & Form)
-
-│       └── welcome.blade.php           <-- Halaman Cover (Landing Page)
-
-├── routes/
-
-│   └── web.php                         <-- Pengatur jalur URL aplikasi
-
-├── public/
-
-
-│   └── css/                            <-- File CSS tambahan (Opsional)
-
-└── .env                                <-- Konfigurasi Database (Rahasia)
-
+```text
+app/
+├── Http/Controllers/NeedController.php  # Logika CRUD
+└── Models/Need.php                     # Koneksi Database
+database/migrations/                    # Skema Tabel MySQL
+resources/views/
+├── layouts/app.blade.php               # Template Utama
+├── needs/index.blade.php               # Dashboard Utama
+└── welcome.blade.php                   # Landing Page
 ---
 
 ## 🚀 Cara Instalasi & Menjalankan Aplikasi
