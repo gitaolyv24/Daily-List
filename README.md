@@ -63,26 +63,48 @@ Design: Gradient Modern & Responsive Layout.
 
 ## my-needs-app/
 ├── app/
+
 │   ├── Http/
+
 │   │   └── Controllers/
+
 │   │       └── NeedController.php      <-- Otak aplikasi (Logika CRUD)
+
 │   └── Models/
+
 │       └── Need.php                    <-- Representasi tabel database
+
 ├── database/
+
 │   └── migrations/
+
 │       └── 2024_xx_xx_create_needs_table.php  <-- Blueprint tabel MySQL
+
 ├── resources/
+
 │   └── views/
+
 │       ├── layouts/
+
 │       │   └── app.blade.php           <-- Template utama (Header/Footer)
+
 │       ├── needs/
+
 │       │   └── index.blade.php         <-- Halaman Dashboard (Daftar & Form)
+
 │       └── welcome.blade.php           <-- Halaman Cover (Landing Page)
+
 ├── routes/
+
 │   └── web.php                         <-- Pengatur jalur URL aplikasi
+
 ├── public/
+
+
 │   └── css/                            <-- File CSS tambahan (Opsional)
+
 └── .env                                <-- Konfigurasi Database (Rahasia)
+
 ---
 
 ## 🚀 Cara Instalasi & Menjalankan Aplikasi
