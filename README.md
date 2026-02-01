@@ -1,67 +1,91 @@
 # Progress Report Project - MyNeeds
 
-MyNeeds adalah aplikasi manajemen kebutuhan harian berbasis web yang dibangun dengan Laravel 12. Aplikasi ini dibuat untuk mempermudah pencatatan barang belanjaan agar lebih terorganisir. Pengguna dapat memberikan label prioritas pada setiap barang untuk menentukan tingkat urgensi kebutuhan.
+MyNeeds adalah aplikasi manajemen kebutuhan harian berbasis web yang dibangun menggunakan **Laravel 12**.  
+Aplikasi ini bertujuan untuk membantu pengguna mencatat dan mengelola kebutuhan belanja agar lebih terorganisir berdasarkan prioritas dan status pembelian.
 
 ---
 
 ## 📌 User Story
 Tujuan utama pengguna dalam aplikasi ini adalah:
-Mengakses dashboard dengan tampilan yang responsif.
-Menginput nama barang, jumlah, dan target tanggal pembelian.
-Menentukan skala prioritas (Tinggi, Sedang, Rendah) untuk setiap item.
-Menandai barang yang sudah dibeli agar daftar tetap diperbarui.
-Menghapus data barang yang sudah tidak diperlukan.
+1. Mengakses dashboard dengan tampilan yang responsif.
+2. Menginput nama barang, jumlah, dan target tanggal pembelian.
+3. Menentukan skala prioritas (Tinggi, Sedang, Rendah) untuk setiap item.
+4. Menandai barang yang sudah dibeli agar daftar tetap diperbarui.
+5. Menghapus data barang yang sudah tidak diperlukan.
 
 ---
 
 ## 🚀 Fitur Utama (SRS)
-Manajemen Data (CRUD): Fasilitas untuk menambah, melihat, memperbarui, dan menghapus daftar kebutuhan.
-Indikator Prioritas: Sistem pewarnaan otomatis untuk membantu identifikasi barang yang paling mendesak.
-Keamanan Aplikasi: Implementasi validasi form dan proteksi CSRF standar Laravel untuk menjaga integritas data.
-Otomatisasi Database: Penggunaan Migration untuk pengelolaan skema tabel secara konsisten.
+- **Manajemen Data (CRUD)**  
+  Menambah, melihat, memperbarui, dan menghapus data kebutuhan harian
+- **Indikator Prioritas**  
+  Setiap item memiliki label prioritas untuk membantu menentukan urgensi
+- **Status Pembelian**  
+  Barang dapat ditandai sebagai “Sudah Dibeli” atau “Belum Dibeli”
+- **Keamanan Aplikasi**  
+  Validasi form dan proteksi CSRF bawaan Laravel
+- **Otomatisasi Database**  
+  Penggunaan Migration untuk menjaga konsistensi struktur tabel
 
 ---
 
 ## 🎨 Arsitektur Aplikasi
 
-Aplikasi menggunakan konsep MVC (Model-View-Controller) untuk pemisahan logika yang jelas:
-Model: File Need.php menangani interaksi langsung dengan tabel di database.
-Controller: File NeedController.php menangani seluruh alur logika bisnis dan pemrosesan data.
-View: Menggunakan Blade Engine (.blade.php) untuk merender antarmuka pengguna.
-
+Aplikasi ini menerapkan konsep **MVC (Model-View-Controller)** untuk memisahkan logika aplikasi secara jelas sehingga mudah dikembangkan dan dipelihara.
+- **Model**  
+  `Need.php` berfungsi sebagai representasi tabel `needs` di database
+- **Controller**  
+  `NeedController.php` menangani alur logika bisnis dan pengolahan data
+- **View**  
+  Menggunakan Blade Template (`.blade.php`) untuk merender tampilan antarmuka
+  
 ---
 
-## Tampilan (Mock-Up)
-Halaman Utama: Dashboard yang berisi form input serta tabel daftar kebutuhan.
-Database: Struktur tabel needs pada MySQL yang mencakup kolom item_name, quantity, priority, dan status.
+## 🖼️ Tampilan (Mock-Up)
+- **Halaman Utama**  
+  Menampilkan form input kebutuhan dan daftar kebutuhan harian
+
+- **Database**  
+  Tabel `needs` berisi kolom:
+  - item_name
+  - quantity
+  - priority
+  - need_date
+  - status
+  - created_at, updated_at
 
 ## 📂 Struktur Proyek
 Aplikasi ini mengikuti pola arsitektur **MVC (Model-View-Controller)**:
 
 ```text
 my-needs-app/
-├── app/Http/Controllers/   <-- Logika Bisnis (Controller)
-├── app/Models/             <-- Representasi Database (Model)
-├── database/migrations/    <-- Skema Tabel (Migration)
-├── resources/views/        <-- Antarmuka Pengguna (View)
-└── routes/web.php          <-- Pengaturan URL (Routing)
+├── app/Http/Controllers/ <-- Logika Bisnis
+├── app/Models/ <-- Model Database
+├── database/migrations/ <-- Skema Tabel
+├── resources/views/ <-- Tampilan (Blade)
+└── routes/web.php <-- Routing Aplikasi
+
 ---
 
 ## 🚀 Cara Instalasi & Menjalankan Aplikasi
 
-### 🗄️ Setup Database (Laravel Way)
-Lakukan Clone pada repositori ini.
-Jalankan perintah composer install melalui terminal.
-Lakukan konfigurasi database pada file .env.
-Jalankan php artisan migrate untuk membuat struktur tabel secara otomatis.
-Jalankan php artisan serve untuk mengaktifkan server lokal.
+### 🗄️ Setup Database
+1. Clone repositori ini
+2. Jalankan:
+   ```bash
+   composer install
+3. Konfigurasi database di file .env
+4. Jalankan migration:
+php artisan migrate
+▶️ Menjalankan Aplikasi
+php artisan serve
 
 ###  Akses Aplikasi
 🌐 Akses Aplikasi
-Laravel tidak diakses melalui folder htdocs secara langsung, melainkan menggunakan server internal.
-Jalankan Server Lokal:
-php artisan serve
-Buka Browser: Akses URL berikut:
-Halaman Utama: http://localhost:8000/needs
-Landing Page: http://localhost:8000
+Laravel dijalankan menggunakan server internal.
+Halaman Utama:
+http://localhost:8000/needs
+Landing Page:
+http://localhost:8000
+
 
